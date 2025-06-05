@@ -13,5 +13,13 @@ function abreMenu(id){
 function burg(){
     let menu = document.getElementById("menu");
 
-    menu.classList.contains("nav-open") ? menu.classList.remove("nav-open") : menu.classList.add("nav-open");
+    if(menu.classList.contains("nav-open")){
+        menu.classList.remove("nav-open");
+        document.getElementById("btn-menu").style.backgroundColor = "#ffffff";
+        document.getElementById("btn-menu").style.color = "#000000";
+    } else {
+        menu.classList.add("nav-open");
+        document.getElementById("btn-menu").style.backgroundColor = "#52bcba";
+        document.getElementById("btn-menu").style.color = "#ffffff";
+    }
 }   
