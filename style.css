@@ -78,7 +78,10 @@ section{
 }
 
 .banner-texto h1{
-    font-size: 2.5rem;
+    font-size: 4rem;
+}
+.banner-texto p{
+    font-size: 1.5rem;
 }
 
 #oficina-main{
@@ -88,14 +91,29 @@ section{
     align-items: center;
 }
 
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+    word-break: break-all;
+}
+
+#oficina-main h3{
+
+    font-size: 1.5rem;
+}
+
+#oficina-main p{
+    text-align: left;
+    font-size: 1.2rem;
+}
+
 #sobre{
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 300px;
     text-align: center;
-    background-image: url("assets/IMG_20160815_193512199.jpg");
+    background-image: url("assets/Foto_Func.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -103,9 +121,9 @@ section{
 }
 
 #sobre h2{
-    font-size: 2.5rem;
     margin-top: 60px;
 }
+
 
 #sobre-back{
     background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
@@ -117,16 +135,19 @@ section{
 }
 #sobre-obj{
     display: flex;
-    justify-content: right;
+    text-align: center;
     align-items: center;
-    padding-right: 120px;
+    justify-content: center;
     height: 100%;
 }
 
 #sobre-obj p{
-    width: 500px;
-    border-radius: 50%;
-    text-align: right;
+    font-size: 1.5rem;
+    width: 90vw;
+    max-width: 100vw;
+    justify-content: right;
+    overflow-x: hidden;
+    word-break: break-word;
 }
 
 #contato{
@@ -193,8 +214,8 @@ iframe{
     background-color: rgba(255, 255, 255, 0.901);
     display: flex;
     align-items: center ;
-    justify-content: space-around;
     overflow: hidden;
+    justify-content: space-around;
 }
 
 .botao:hover{
@@ -204,7 +225,7 @@ iframe{
 .txt-ofc{
     position: relative;
     overflow-y: hidden;
-    width: 50vw;
+    width: 40%;
 }
 
 
@@ -216,8 +237,8 @@ iframe{
 .img-ofc{
     box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    max-width: 300px;
-    max-height: 150px;
+    max-width: 50vh;
+    max-height: 30vh;
 }
 
 #oficina {
@@ -226,6 +247,9 @@ iframe{
     align-items: center;
     justify-content: center;
 }
+
+
+
 
 #lista-oficina{
     box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.1);
@@ -263,34 +287,65 @@ button:hover{
 }
 
 @media (max-width: 768px) {
+
     header ul {
         position: fixed;
         top: -200px;
         right: 0px;
         flex-direction: column;
-        align-items: right;
-        justify-content: right;
+        align-items: flex-end;
+        justify-content: flex-end;
         padding: 10px;
         font-size: 1.5rem;
         border-radius: 0px 0px 20px 20px;
         background-color: white;
         transition: all 0.3s ease-in-out;
-        width: 100%;
+        width: 100vw;
+        box-sizing: border-box;
+        border: none;
+        box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.1);
+        overflow-x: hidden;
     }
 
     hr {
         width: 100%;
+        margin: 0;
+        border: none;
+        border-top: 1px solid #e0e0e0;
     }
 
     header ul li{
         margin: 0;
     }
 
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }   
+
+    iframe {
+        width: 80vw;
+        height: 90vw;
+    }
+
+    footer{
+        width: 100vw;;
+    }
+    
     #banner {
-        background-image: url("assets/IMG-20250604-WA0013.jpg");
+        background-image: url("assets/Background-censura.png");
         background-size: cover;
         background-position: 80vh;
-        height: 100vh;
+        width: 100%;
+    }
+
+    #banner h1 {
+        font-size: 2rem;
+    }
+
+    #banner p {
+        font-size: 1rem;
     }
 
     .nav-open{
@@ -311,24 +366,71 @@ button:hover{
     }
 
     .oficina {
-        background-image: url("assets/IMG-20250604-WA0014.jpg");
-        background-size: cover;
         color: white;
         overflow-y: auto;
     }
 
+    #dropdown-1 {
+        background-image: url("assets/isometric-view.jpg");
+        background-size: cover;
+    }
+
+    #dropdown-2 {
+        background-image: url("assets/capo-bg.jpg");
+        background-size: cover;
+    }
+
+    #dropdown-3 {
+        background-image: url("assets/mqn-close.jpg");
+        background-size: cover;
+    }
+
+    #dropdown-4 {
+        background-image: url("assets/ofc-prat.jpg");
+        background-size: cover;
+    }
+
+    #dropdown-5 {
+        background-image: url("assets/escrit-sh.jpg");
+        background-size: cover;
+    }
+
     .back-ofc
     {
-            background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-            height: 100%;
-            width: 100%;
-        }
+        background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
     .txt-ofc {
         top: 0;
+        width: 100%;
+        padding : 20px;
     }
 
     .img-ofc {
         display: none;
     }
 
+    #sobre-back{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #sobre-obj p {
+        text-align: center;
+    }
+
+    #contato ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
 }
+
